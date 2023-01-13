@@ -1,0 +1,64 @@
+@font-face {
+  font-family: "sanchezregular";
+  src: url("./fonts/sanchez-regular-webfont.woff2") format("woff2"),
+    url("./fonts/sanchez-regular-webfont.woff") format("woff"),
+    url("./fonts/sanchez-regular-webfont.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "sanchezregular";
+}
+.dash-head-container {
+  width: 100%;
+  height: auto;
+  background-color: rgb(111, 206, 174);
+  display: flex;
+}
+.dash-head {
+  width: 55%;
+  height: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-left: auto;
+}
+.dashImg {
+  width: 75px;
+  height: 75px;
+  border-radius: 50%;
+}
+.head {
+  color: rgb(236, 236, 236);
+}
+.add-task-container {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 15px;
+}
+.add {
+  width: 35%;
+  height: 35px;
+  font-size: 30px;
+  font-family: "sanchezregular";
+  margin-right: 5px;
+  color: rgb(58, 58, 58);
+}
+.add::placeholder {
+  font-family: "sanchezregular";
+  color: rgb(150, 150, 150);
+}
+.add:focus {
+  outline: none !important;
+  border: 3px solid rgb(111, 206, 174);
+}
+.fa-plus {
+  background-color: rgb(111, 206, 174);
+  padding: 15px;
+  border-radius: 50%;
+  color: #fff;
+}
