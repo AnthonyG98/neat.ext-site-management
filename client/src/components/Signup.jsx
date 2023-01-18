@@ -2,6 +2,7 @@ import React from "react";
 import { useSelector, useDispatch } from "react-redux";
 import { authActions } from "../store/auth-slice";
 import { useNavigate, Link } from "react-router-dom";
+import { Tasks } from "./Tasks";
 import axios from "axios";
 
 function SignUp() {
@@ -33,40 +34,42 @@ function SignUp() {
     });
   };
   return (
-    <div className="form-container">
-      <div className="inputs">
-        <h1 className="login-head">SIGN UP</h1>
-        <div className="input-container">
-          {/* <label>Username:</label> */}
-          <input
-            type="text"
-            placeholder="Username"
-            onChange={(e) => {
-              changeUsername(e.target.value);
-            }}
-          />
+    <>
+      <div className="form-container">
+        <div className="inputs">
+          <h1 className="login-head">SIGN UP</h1>
+          <div className="input-container">
+            {/* <label>Username:</label> */}
+            <input
+              type="text"
+              placeholder="Username"
+              onChange={(e) => {
+                changeUsername(e.target.value);
+              }}
+            />
+          </div>
+          <div className="input-container">
+            {/* <label>Password</label> */}
+            <input
+              type="password"
+              placeholder="Password"
+              onChange={(e) => {
+                changePassword(e.target.value);
+              }}
+            />
+          </div>
+          <button className="form-btn" onClick={signUpUser}>
+            SIGN UP
+          </button>
+          <p className="main-link-text">
+            Already have an account?{" "}
+            <Link to="/" className="main-link">
+              Login here
+            </Link>
+          </p>
         </div>
-        <div className="input-container">
-          {/* <label>Password</label> */}
-          <input
-            type="password"
-            placeholder="Password"
-            onChange={(e) => {
-              changePassword(e.target.value);
-            }}
-          />
-        </div>
-        <button className="form-btn" onClick={signUpUser}>
-          SIGN UP
-        </button>
-        <p className="main-link-text">
-          Already have an account?{" "}
-          <Link to="/" className="main-link">
-            Login here
-          </Link>
-        </p>
       </div>
-    </div>
+    </>
   );
 }
 

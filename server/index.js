@@ -10,6 +10,8 @@ const db = require("./models");
 //routes
 const users = require("./routes/users");
 app.use("/users", users);
+const tasks = require("./routes/task");
+app.use("/tasks", tasks);
 
 db.sequelize
   .sync()

@@ -3,6 +3,9 @@ import axios from "axios";
 import { useSelector, useDispatch } from "react-redux";
 import { authActions } from "../store/auth-slice";
 export function Login() {
+  let url = "http://localhost:3001";
+  let history = useNavigate();
+
   const dispatch = useDispatch();
   const userUsername = useSelector((state) => state.auth.username);
   const userPassword = useSelector((state) => state.auth.password);
